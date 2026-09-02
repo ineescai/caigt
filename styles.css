@@ -30,7 +30,7 @@ img { display: block; max-width: 100%; }
 .brand-name { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: .65rem; }
 .brand-name strong { font: 800 1.55rem/1 "Montserrat", sans-serif; letter-spacing: .05em; color: var(--cyan-300); }
 .brand-name small { max-width: 190px; font: 600 .68rem/1.25 "Montserrat", sans-serif; letter-spacing: .04em; text-transform: uppercase; }
-.main-menu { display: flex; align-items: center; gap: 1.7rem; }
+.main-menu { display: flex; align-items: center; gap: 1.2rem; }
 .main-menu a { position: relative; color: rgba(255,255,255,.86); font: 600 .84rem/1 "Montserrat", sans-serif; text-decoration: none; }
 .main-menu a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -.7rem; height: 2px; background: var(--gold-400); transition: right .2s ease; }
 .main-menu a:hover::after, .main-menu a:focus-visible::after { right: 0; }
@@ -55,10 +55,22 @@ h1 span { color: var(--cyan-300); }
 
 .section { padding-block: 6.5rem; }
 .section-light { background: var(--gray-50); }
+.section-white { background: var(--white); }
 .split-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 6rem; align-items: start; }
 h2 { margin-bottom: 1.2rem; color: var(--navy-900); font-size: clamp(2.15rem, 4vw, 3.8rem); letter-spacing: -.035em; }
 .lead-panel { padding: 2rem 2rem 1.2rem; border-top: 4px solid var(--cyan-500); background: var(--white); box-shadow: var(--shadow); }
 .lead-panel p:first-child { margin-top: 0; font-size: 1.18rem; }
+.feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.1rem; }
+.feature-card { padding: 1.7rem; border-top: 4px solid var(--cyan-500); background: var(--gray-50); }
+.feature-card span { color: var(--cyan-500); font: 800 .78rem/1 "Montserrat", sans-serif; }
+.feature-card h3 { margin: 2.6rem 0 .8rem; color: var(--navy-900); font-size: 1.12rem; }
+.feature-card p { margin: 0; color: var(--gray-600); font-size: .96rem; }
+.objectives-section { color: rgba(255,255,255,.82); background: linear-gradient(125deg, #0a3155, #06213c); }
+.objectives-section h2 { color: var(--white); }
+.objective-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 3rem; background: rgba(255,255,255,.16); }
+.objective-grid article { padding: 1.7rem; background: var(--navy-800); }
+.objective-grid h3 { color: var(--gold-400); font-size: 1.08rem; }
+.objective-grid p { margin-bottom: 0; font-size: .96rem; }
 .section-blue { color: rgba(255,255,255,.83); background: linear-gradient(135deg, var(--navy-900), var(--navy-800)); }
 .section-blue h2, .documents-section h2 { color: var(--white); }
 .section-kicker-light { color: var(--cyan-300); }
@@ -80,6 +92,17 @@ h2 { margin-bottom: 1.2rem; color: var(--navy-900); font-size: clamp(2.15rem, 4v
 .work-card h3 { color: var(--navy-900); font-size: 1.15rem; }
 .work-card p { margin-bottom: 0; color: var(--gray-600); font-size: .98rem; }
 
+.agenda-section { background: var(--white); }
+.agenda-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 5rem; align-items: start; }
+.agenda-layout > div:first-child > p { max-width: 520px; color: var(--gray-600); }
+.button-dark { margin-top: 1.2rem; color: var(--white); background: var(--navy-900); }
+.event-list { border-top: 4px solid var(--gold-400); }
+.event-list article { padding: 1.4rem 0; border-bottom: 1px solid var(--gray-100); }
+.event-list time { color: var(--blue-700); font: 700 .75rem/1 "Montserrat", sans-serif; text-transform: uppercase; }
+.event-list h3 { margin: .55rem 0 .5rem; color: var(--navy-900); font-size: 1.1rem; }
+.event-list p { margin: 0; color: var(--gray-600); font-size: .96rem; }
+.text-link { display: inline-block; margin-top: 1.4rem; color: var(--blue-700); font-weight: 700; }
+
 .documents-section { color: rgba(255,255,255,.82); background: var(--navy-950); }
 .documents-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 .documents-layout > div > p:last-child { max-width: 590px; }
@@ -92,6 +115,8 @@ h2 { margin-bottom: 1.2rem; color: var(--navy-900); font-size: clamp(2.15rem, 4v
 .site-footer strong { color: var(--white); font-family: "Montserrat", sans-serif; }
 .site-footer p { margin: .25rem 0 0; }
 .footer-note { font-size: .9rem; }
+.footer-contact { display: flex; flex-direction: column; align-items: end; }
+.footer-contact a { color: rgba(255,255,255,.78); text-decoration: none; }
 
 @media (max-width: 900px) {
   .menu-button { display: block; padding: .55rem .8rem; color: var(--white); border: 1px solid rgba(255,255,255,.35); background: transparent; font: 600 .8rem "Montserrat", sans-serif; }
@@ -100,7 +125,8 @@ h2 { margin-bottom: 1.2rem; color: var(--navy-900); font-size: clamp(2.15rem, 4v
   .main-menu a::after { display: none; }
   .hero { min-height: 640px; }
   .hero-mark { right: 1rem; font-size: 12rem; }
-  .split-layout, .section-heading, .documents-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .split-layout, .section-heading, .documents-layout, .agenda-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .feature-grid, .objective-grid { grid-template-columns: repeat(2, 1fr); }
   .institution-columns { grid-template-columns: 1fr; }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -113,9 +139,10 @@ h2 { margin-bottom: 1.2rem; color: var(--navy-900); font-size: clamp(2.15rem, 4v
   .hero-copy { font-size: 1.08rem; }
   .hero-mark { display: none; }
   .section { padding-block: 4.5rem; }
-  .institution-list-compact, .card-grid { grid-template-columns: 1fr; }
+  .institution-list-compact, .card-grid, .feature-grid, .objective-grid { grid-template-columns: 1fr; }
   .work-card { min-height: auto; }
   .footer-grid { align-items: start; flex-direction: column; }
+  .footer-contact { align-items: start; }
 }
 
 @media (prefers-reduced-motion: reduce) {
