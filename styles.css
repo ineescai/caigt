@@ -67,10 +67,16 @@ h2 { margin-bottom: 1.2rem; color: var(--navy-900); font-size: clamp(2.15rem, 4v
 .feature-card span { color: var(--cyan-500); font: 800 .78rem/1 "Montserrat", sans-serif; }
 .feature-card h3 { margin: 2.6rem 0 .8rem; color: var(--navy-900); font-size: 1.12rem; }
 .feature-card p { margin: 0; color: var(--gray-600); font-size: .96rem; }
+.principles { display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: center; margin-top: 1.5rem; padding: 1.25rem 1.5rem; border: 1px solid var(--gray-100); background: var(--white); }
+.principles strong { color: var(--navy-900); font-family: "Montserrat", sans-serif; }
+.principles ul { display: flex; flex-wrap: wrap; gap: .55rem; margin: 0; padding: 0; list-style: none; }
+.principles li { padding: .45rem .7rem; color: var(--blue-700); background: var(--gray-50); font-size: .88rem; font-weight: 600; }
 .objectives-section { color: rgba(255,255,255,.82); background: linear-gradient(125deg, #0a3155, #06213c); }
 .objectives-section h2 { color: var(--white); }
+.objectives-lead { max-width: 880px; margin: 0; color: rgba(255,255,255,.76); font-size: 1.05rem; }
 .objective-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 3rem; background: rgba(255,255,255,.16); }
 .objective-grid article { padding: 1.7rem; background: var(--navy-800); }
+.objective-grid span { color: var(--cyan-300); font: 800 .76rem/1 "Montserrat", sans-serif; }
 .objective-grid h3 { color: var(--gold-400); font-size: 1.08rem; }
 .objective-grid p { margin-bottom: 0; font-size: .96rem; }
 .section-blue { color: rgba(255,255,255,.83); background: linear-gradient(135deg, var(--navy-900), var(--navy-800)); }
@@ -87,12 +93,21 @@ h2 { margin-bottom: 1.2rem; color: var(--navy-900); font-size: clamp(2.15rem, 4v
 .section-heading { display: grid; grid-template-columns: 1.25fr .75fr; gap: 3rem; align-items: end; margin-bottom: 3rem; }
 .section-heading h2 { margin-bottom: 0; }
 .section-heading > p { margin: 0 0 .6rem; color: var(--gray-600); }
+.phase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.phase-card { padding: 2rem; border-top: 4px solid var(--gold-400); background: var(--gray-50); }
+.phase-card span { color: var(--blue-700); font: 800 1.35rem/1 "Montserrat", sans-serif; }
+.phase-card h3 { margin: 1.5rem 0 .7rem; color: var(--navy-900); font-size: 1.2rem; }
+.phase-card p { margin: 0; color: var(--gray-600); }
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-.work-card { min-height: 260px; padding: 1.7rem; border: 1px solid var(--gray-100); border-bottom: 4px solid transparent; background: var(--white); box-shadow: 0 8px 24px rgba(3,23,43,.06); transition: transform .2s ease, border-color .2s ease; }
+.work-card { min-height: 360px; padding: 1.7rem; border: 1px solid rgba(3,23,43,.12); border-bottom: 4px solid transparent; background: var(--white); box-shadow: 0 8px 24px rgba(3,23,43,.08); transition: transform .2s ease, border-color .2s ease; }
 .work-card:hover { transform: translateY(-5px); border-bottom-color: var(--cyan-500); }
-.work-card span { display: inline-block; margin-bottom: 2.5rem; color: var(--cyan-500); font: 800 .8rem/1 "Montserrat", sans-serif; }
+.work-card span { display: inline-block; margin-bottom: 1.8rem; color: var(--cyan-500); font: 800 .8rem/1 "Montserrat", sans-serif; }
 .work-card h3 { color: var(--navy-900); font-size: 1.15rem; }
 .work-card p { margin-bottom: 0; color: var(--gray-600); font-size: .98rem; }
+.work-products { margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid var(--gray-100); }
+.work-products strong { color: var(--blue-700); font: 700 .75rem/1 "Montserrat", sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.work-products p { margin-top: .55rem; font-size: .92rem; }
+#mesas .section-heading > p { color: var(--navy-900); }
 
 .agenda-section { background: var(--white); }
 .agenda-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 5rem; align-items: start; }
@@ -104,6 +119,14 @@ h2 { margin-bottom: 1.2rem; color: var(--navy-900); font-size: clamp(2.15rem, 4v
 .event-list h3 { margin: .55rem 0 .5rem; color: var(--navy-900); font-size: 1.1rem; }
 .event-list p { margin: 0; color: var(--gray-600); font-size: .96rem; }
 .text-link { display: inline-block; margin-top: 1.4rem; color: var(--blue-700); font-weight: 700; }
+
+.results-section { background: var(--gray-50); }
+.results-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 4rem; align-items: start; }
+.results-layout > div:first-child > p:last-child { color: var(--gray-600); }
+.results-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.results-grid article { padding: 1.4rem; border-left: 4px solid var(--cyan-500); background: var(--white); box-shadow: 0 8px 24px rgba(3,23,43,.05); }
+.results-grid strong { color: var(--navy-900); font-family: "Montserrat", sans-serif; }
+.results-grid p { margin: .55rem 0 0; color: var(--gray-600); font-size: .94rem; }
 
 .documents-section { color: rgba(255,255,255,.82); background: var(--navy-950); }
 .documents-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
@@ -127,8 +150,9 @@ h2 { margin-bottom: 1.2rem; color: var(--navy-900); font-size: clamp(2.15rem, 4v
   .main-menu a::after { display: none; }
   .hero { min-height: 640px; }
   .hero-seal { right: calc(2% + 96px); width: 408px; height: 408px; opacity: .075; }
-  .split-layout, .section-heading, .documents-layout, .agenda-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .split-layout, .section-heading, .documents-layout, .agenda-layout, .results-layout { grid-template-columns: 1fr; gap: 2rem; }
   .feature-grid, .objective-grid { grid-template-columns: repeat(2, 1fr); }
+  .phase-grid { grid-template-columns: 1fr; }
   .institution-columns { grid-template-columns: 1fr; }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -142,7 +166,8 @@ h2 { margin-bottom: 1.2rem; color: var(--navy-900); font-size: clamp(2.15rem, 4v
   .hero-mark { display: none; }
   .hero-glow, .hero-seal { display: none; }
   .section { padding-block: 4.5rem; }
-  .institution-list-compact, .card-grid, .feature-grid, .objective-grid { grid-template-columns: 1fr; }
+  .principles { grid-template-columns: 1fr; }
+  .institution-list-compact, .card-grid, .feature-grid, .objective-grid, .results-grid { grid-template-columns: 1fr; }
   .work-card { min-height: auto; }
   .footer-grid { align-items: start; flex-direction: column; }
   .footer-contact { align-items: start; }
