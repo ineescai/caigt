@@ -52,7 +52,7 @@ h1 span { color: var(--cyan-300); }
 .button-primary { color: var(--navy-950); background: var(--gold-400); }
 .button-secondary { color: var(--white); border-color: rgba(255,255,255,.35); }
 .button:hover { transform: translateY(-2px); }
-.hero-mark { position: absolute; right: max(2rem, calc((100vw - 1160px)/2)); bottom: -3rem; z-index: 1; color: rgba(255,255,255,.045); font: 800 19rem/1 "Montserrat", sans-serif; letter-spacing: -.1em; }
+.hero-mark { display: none; }
 
 .section { padding-block: 6.5rem; }
 .section-light { background: var(--gray-50); }
@@ -126,7 +126,6 @@ h2 { margin-bottom: 1.2rem; color: var(--navy-900); font-size: clamp(2.15rem, 4v
   .main-menu.open { display: grid; gap: 1.3rem; }
   .main-menu a::after { display: none; }
   .hero { min-height: 640px; }
-  .hero-mark { right: 1rem; font-size: 12rem; }
   .hero-glow img { width: 68%; height: 68%; opacity: .075; }
   .split-layout, .section-heading, .documents-layout, .agenda-layout { grid-template-columns: 1fr; gap: 2rem; }
   .feature-grid, .objective-grid { grid-template-columns: repeat(2, 1fr); }
